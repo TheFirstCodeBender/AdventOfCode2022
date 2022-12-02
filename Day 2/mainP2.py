@@ -11,10 +11,10 @@ Strategy = {'X': 'lose',
 Values = {'Rock': 1,
           'Paper': 2,
           'Scissors': 3}
-mapToLosing = {'Rock': 'Scissors',
+MapToLosing = {'Rock': 'Scissors',
                'Paper': 'Rock',
                'Scissors': 'Paper'}
-mapToVictory = {'Rock': 'Paper',
+MapToVictory = {'Rock': 'Paper',
                 'Paper': 'Scissors',
                 'Scissors': 'Rock'}
 
@@ -23,9 +23,9 @@ def RPS(p1, strategy):
     if strategy == 'draw':
         return p1
     if strategy == 'win':
-        return mapToVictory[p1]
+        return MapToVictory[p1]
     if strategy == 'lose':
-        return mapToLosing[p1]
+        return MapToLosing[p1]
 
 
 def StrategyGuide(rounds):
