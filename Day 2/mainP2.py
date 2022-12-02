@@ -11,9 +11,11 @@ Strategy = {'X': 'lose',
 Values = {'Rock': 1,
           'Paper': 2,
           'Scissors': 3}
+
 MapToLosing = {'Rock': 'Scissors',
                'Paper': 'Rock',
                'Scissors': 'Paper'}
+
 MapToVictory = {'Rock': 'Paper',
                 'Paper': 'Scissors',
                 'Scissors': 'Rock'}
@@ -36,8 +38,8 @@ def StrategyGuide(rounds):
         strategy = Strategy[roundClean[1]]
         p2 = RPS(p1, strategy)
         win = 0
-
         value = Values[p2]
+            
         if strategy == 'win':
             win = 6
         elif strategy == 'draw':
