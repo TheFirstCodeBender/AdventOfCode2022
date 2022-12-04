@@ -27,11 +27,9 @@ def RuckSackReorder(compartments):
             value = convertToPriority(sameItems.pop())
 
             total += value
-            count = 0
-            memory = {1: set(),
-              2: set(),
-              3: set()
-              }
+            while count > 0:
+                memory[count].clear()
+                count -= 1
 
     return total
 
@@ -39,4 +37,4 @@ def RuckSackReorder(compartments):
 if __name__ == '__main__':
     file = open('input', 'r')
     elves = file.readlines()
-    print(RuckSackReorder(elves))
+    print(elves)
