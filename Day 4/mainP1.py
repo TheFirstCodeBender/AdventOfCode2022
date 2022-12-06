@@ -15,8 +15,6 @@ def PairContainers(pairs):
 
         if (lower2 <= lower1 and upper1 <= upper2) or (lower1 <= lower2 and upper2 <= upper1):
             count += 1
-        else:
-            print(pair)
 
     return count
 

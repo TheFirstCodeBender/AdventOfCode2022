@@ -18,6 +18,7 @@ def RuckSackReorder(compartments):
                 else:
                     value = ord(compartment[item]) - 96
                 memory.clear()
+                break
 
         total += value
     return total

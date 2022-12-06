@@ -37,4 +37,4 @@ def RuckSackReorder(compartments):
 if __name__ == '__main__':
     file = open('input', 'r')
     elves = file.readlines()
-    print(elves)
+    print(RuckSackReorder(elves))

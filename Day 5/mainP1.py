@@ -36,8 +36,7 @@ def SupplyStacks(instructions):
             From = int(line[2]) - 1
             to = int(line[3]) - 1
 
-        for stack in range(0, move):
-            stack = stack - 1
+        for _ in range(0, move):
             memory[to].append(memory[From].pop())
     for item in memory:
         answer.append(item.pop())
