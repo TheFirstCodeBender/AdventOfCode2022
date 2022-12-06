@@ -11,7 +11,7 @@ import re
 [J] [V] [G] [B] [F] [G] [D] [H] [G]
  1   2   3   4   5   6   7   8   9 
 '''
-memory = [ ['J', 'H', 'G', 'M', 'Z', 'N', 'T', 'F'],
+memory = [['J', 'H', 'G', 'M', 'Z', 'N', 'T', 'F'],
           ['V', 'W', 'J'],
           ['G', 'V', 'L', 'J', 'B', 'T', 'H'],
           ['B', 'P', 'J', 'N', 'C', 'D', 'V', 'L'],
@@ -27,7 +27,6 @@ def SupplyStacks(instructions):
     answer = []
     for line in instructions:
         line = re.sub(r'[^0-9]', '', line)
-        print(int(line[0] + line[1]))
         if len(line) == 3:
             move = int(line[0])
             From = int(line[1]) - 1
@@ -37,15 +36,12 @@ def SupplyStacks(instructions):
             From = int(line[2]) - 1
             to = int(line[3]) - 1
 
-        for stack in range(0,move):
+        for stack in range(0, move):
             stack = stack - 1
             memory[to].append(memory[From].pop())
     for item in memory:
         answer.append(item.pop())
     return answer
-
-
-
 
 
 if __name__ == '__main__':
