@@ -3,7 +3,6 @@ import re
 
 def StartOfPacketMarker(lines):
     for line in lines:
-        print(line)
         for char in range(0, len(line)):
             num = line[char: char + 4]
             numSet = set(num)
